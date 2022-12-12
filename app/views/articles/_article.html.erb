@@ -9,4 +9,9 @@
     <%= article.content %>
   </p>
 
+    <strong>Tags:</strong>
+    <% article.tags.each do |tag| %>
+      <p><%= tag.tag_name %></p>
+    <% end %>
+
 </div>

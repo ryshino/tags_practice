@@ -5,5 +5,6 @@ https://post-output.com/185/
 
 2回目で参考にした記事
 この記事ではあらかじめ設定したタグを選択する
-検索機能も実装
+検索機能も実装  
+この記事の検索機能だと3つタグを選択するとAND検索ができなくなる  
 https://qiita.com/MandoNarin/items/5a5610a40c66f77d6c10

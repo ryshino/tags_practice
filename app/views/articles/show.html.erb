@@ -8,7 +8,3 @@
 
   <%= button_to "Destroy this article", @article, method: :delete %>
 </div>
-
-<% @article.tags.each do |tag| %>
-    <span><%= tag.tag_name %></span>
-<% end %>

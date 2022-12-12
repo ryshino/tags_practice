@@ -9,6 +9,11 @@
     <%= submit_tag '検索' %>
 <% end %>
 
+<%#= form_tag({controller:"articles",action:"index"}, method: :get) do %>
+    <%#= text_field_tag :tag_name %>
+    <%#= submit_tag 'タグを追加' %>
+<%# end %>
+
 <div id="articles">
   <% @articles.each do |article| %>
     <%= render article %>

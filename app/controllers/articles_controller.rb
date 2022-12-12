@@ -32,6 +32,10 @@ class ArticlesController < ApplicationController
         end
       end
     end
+
+    if params[:tag_name]
+      Tag.create(tag_name: params[:tag_name])
+    end
   end
 
   # GET /articles/1 or /articles/1.json
