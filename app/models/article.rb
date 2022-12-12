@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
-  has_many :article_tags
-  has_many :tags, through: :article_tags
+  has_many :article_tags, dependent: :destroy
+  has_many :tags, through: :article_tags, dependent: :destroy
 
   def tags_save(tag_list)
     # すでにタグ付け登録していた場合、紐付いているタグをすべて削除

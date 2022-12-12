@@ -2,6 +2,13 @@
 
 <h1>Articles</h1>
 
+<%= form_tag({controller:"articles",action:"index"}, method: :get) do %>
+    <% Tag.all.each do |t| %>
+        <li><%= check_box :tag_ids, t.tag_name %><%= t.tag_name %></li>
+    <% end %>
+    <%= submit_tag '検索' %>
+<% end %>
+
 <div id="articles">
   <% @articles.each do |article| %>
     <%= render article %>
