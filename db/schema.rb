@@ -10,14 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_17_080525) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_24_000605) do
   create_table "article_tags", force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "tag_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["article_id"], name: "index_article_tags_on_article_id"
     t.index ["tag_id"], name: "index_article_tags_on_tag_id"
+    t.index ["user_id"], name: "index_article_tags_on_user_id"
   end
 
   create_table "articles", force: :cascade do |t|
@@ -44,5 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_17_080525) do
 
   add_foreign_key "article_tags", "articles"
   add_foreign_key "article_tags", "tags"
+  add_foreign_key "article_tags", "users"
   add_foreign_key "articles", "users"
 end
